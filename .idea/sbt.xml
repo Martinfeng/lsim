@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaSbtSettings">
+    <option name="customLauncherEnabled" value="true" />
+    <option name="customLauncherPath" value="C:\Program Files (x86)\sbt\bin\sbt-launch.jar" />
+    <option name="customVMPath" />
+    <option name="linkedExternalProjectsSettings">
+      <SbtProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/project" />
+          </set>
+        </option>
+        <option name="sbtVersion" value="1.2.1" />
+        <option name="useAutoImport" value="true" />
+        <option name="useOurOwnAutoImport" value="true" />
+      </SbtProjectSettings>
+      <SbtProjectSettings>
+        <option name="externalProjectPath" value="Z:\个人工作记录\丁峰\社交网络分析\code\LSIM" />
+        <option name="useAutoImport" value="true" />
+        <option name="useOurOwnAutoImport" value="true" />
+      </SbtProjectSettings>
+    </option>
+    <option name="vmParameters" value="-XX:MaxPermSize=512M -Dsbt.log.format=true -Dsbt.boot.directory=E:/sbt/boot -Dsbt.global.base=E:/sbt/sbt -Dsbt.ivy.home=E:/sbt/ivy2 -Dsbt.repository.config=E:/sbt/conf/repo.properties" />
+  </component>
+</project>

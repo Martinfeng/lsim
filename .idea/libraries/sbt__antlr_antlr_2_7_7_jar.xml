@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sbt: antlr:antlr:2.7.7:jar">
+    <CLASSES>
+      <root url="jar://E:/sbt/ivy2/cache/antlr/antlr/jars/antlr-2.7.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
