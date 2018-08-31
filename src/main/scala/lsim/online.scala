@@ -3,7 +3,6 @@ package lsim
 import org.apache.spark.graphx.{Edge, Graph, VertexId}
 import org.apache.spark.mllib.linalg.{DenseMatrix, Matrix, SparseMatrix}
 import org.apache.spark.rdd.RDD
-
 import scala.math.pow
 
 class online {

@@ -7,13 +7,13 @@ import scala.collection.Map
 
 class offline {
   //蒙特卡洛模拟随机游走
-  def OneWalk(Walk:Map[Int,(Array[Int],Int)], i: Int): Int = {
-    if(Walk.contains(i)) Walk(i)(0)(nextInt(Walk(i)(1)))
+  def OneWalk(Walk:Map[Int,Array[Int]], i: Int): Int = {
+    if(Walk.contains(i)) Walk(i)(nextInt(Walk(i).length))
     else -1
   }
 
   //计算矩阵D所需的两个参数
-  def Algo5(k: Int, R: Int, c: Double, D: List[Double], T: Int, Walk:Map[Int,(Array[Int],Int)]): Double = {
+  def Algo5(k: Int, R: Int, c: Double, D: List[Double], T: Int, Walk:Map[Int,Array[Int]]): Double = {
     var alpha = 0.0
     var beta = 0.0
     var K = List.fill(R)(k)
@@ -40,10 +40,10 @@ class offline {
 //    }
 //    D.toArray
 //  }
-
+  @transient
   def Algo4(L: Int, Nodes_num: Int, R: Int, c: Double, T: Int, G: RDD[((Int, Int), Double)]): Array[Double] = {
     val Walk=G.filter(x=>x._2==1).map(x=>(x._1._1,x._1._2)).groupBy(x=>x._1)
-      .map(x=>(x._1,(x._2.toArray.map(y=>y._2),x._2.toArray.length)))
+      .map(x=>(x._1,x._2.toArray.map(y=>y._2)))
       .collectAsMap
     G.sparkContext.broadcast(Walk)
     val D_list = List.fill(Nodes_num)(1.0)
